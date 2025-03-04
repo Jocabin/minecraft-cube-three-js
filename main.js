@@ -60,12 +60,11 @@ texture.minFilter = THREE.NearestFilter
 texture.magFilter = THREE.NearestFilter
 
 const geometry = new THREE.BoxGeometry(1.7, 1.7, 1.7)
-const baseMaterial = new THREE.MeshStandardMaterial({ map: texture })
 const material = new CustomShaderMaterial({
-        baseMaterial: baseMaterial,
+        baseMaterial: THREE.MeshStandardMaterial,
         vertexShader: vertex,
         flatShading: true,
-        color: 0xff00ff,
+        map: texture
 })
 
 const cube = new THREE.Mesh(geometry, material)
