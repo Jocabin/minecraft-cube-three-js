@@ -221,6 +221,7 @@ function animate() {
                                 material.map = textures[textureIndex]
 
                                 score += Math.floor(Math.random() * (15 - 5 + 1)) + 5
+                                document.getElementById('score').textContent = "Score: " + score
                                 scene.remove(text)
                                 textGeometry.dispose()
                                 loadScoreText(score)
