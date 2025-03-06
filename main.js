@@ -243,4 +243,9 @@ window.addEventListener('pointerdown', () => {
 window.addEventListener('pointerup', () => {
         pointerDown = false
 })
+const audio = new Audio('/minecraft.mp3');
+audio.loop = true;
+window.addEventListener('click', () => {
+        audio.play();
+});
 renderer.setAnimationLoop(animate)
